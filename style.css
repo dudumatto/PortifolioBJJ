@@ -663,3 +663,21 @@ footer p {
     }
 }
 
+/* --- Estilos para o Vídeo Local --- */
+
+.local-video-container {
+    max-width: 900px; /* Largura máxima para não ficar gigante no PC */
+    margin: 0 auto; /* Centraliza na tela */
+    border-radius: 12px; /* Bordas arredondadas */
+    overflow: hidden; /* Garante que o vídeo respeite as bordas */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombra para destaque */
+    border: 1px solid #333; /* Borda sutil */
+    background-color: #000; /* Fundo preto */
+}
+
+.video-player {
+    width: 100%; /* Ocupa 100% do container */
+    height: auto; /* Mantém a proporção correta */
+    display: block; /* Remove espaços extras */
+    outline: none;
+}
