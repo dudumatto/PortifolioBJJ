@@ -1,0 +1,556 @@
+/* --- Variáveis e Reset --- */
+:root {
+    --primary-color: #D4AF37; /* Dourado (Vitória) */
+    --dark-bg: #121212;
+    --card-bg: #1E1E1E;
+    --text-light: #FFFFFF;
+    --text-gray: #CCCCCC;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* --- Utilitários --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+.section-subtitle {
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--text-gray);
+    margin-top: -30px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #000;
+    padding: 15px 30px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-family: var(--font-heading);
+}
+
+.btn-primary:hover {
+    background-color: #fff;
+    transform: translateY(-3px);
+}
+
+/* --- Header --- */
+header {
+    background-color: rgba(18, 18, 18, 0.95);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+.btn-contact {
+    border: 1px solid var(--primary-color);
+    padding: 8px 20px;
+    border-radius: 4px;
+    color: var(--primary-color) !important;
+}
+
+.btn-contact:hover {
+    background-color: var(--primary-color);
+    color: #000 !important;
+}
+
+/* --- Hero Section Banner --- */
+.hero-banner {
+    width: 100%;
+    position: relative;
+    background-color: #000; /* Fundo preto caso a imagem demore a carregar */
+    padding-top: 80px; /* Espaço para o menu fixo não cobrir o topo da imagem */
+}
+
+.banner-container {
+    position: relative;
+    width: 100%;
+    max-width: 1920px; /* Largura máxima para monitores gigantes */
+    margin: 0 auto;
+}
+
+.img-responsive {
+    width: 100%;       /* A largura será sempre 100% da tela */
+    height: auto;      /* A altura se ajusta automaticamente (proporcional) */
+    display: block;    /* Remove espaços extras abaixo da imagem */
+}
+
+/* --- (Opcional) Texto por cima da imagem --- */
+.hero-content-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza perfeitamente */
+    text-align: center;
+    width: 90%; /* Ocupa 90% da largura para não bater nas bordas no celular */
+}
+
+/* Ajustes para telas pequenas (Celular) */
+/* --- Ajustes Específicos para Celular (Mobile) --- */
+@media (max-width: 768px) {
+    
+    /* 1. Melhoria no Cabeçalho */
+    header {
+        padding: 10px 0; /* Menos altura no header */
+        background-color: rgba(18, 18, 18, 0.98); /* Fundo mais escuro para ler melhor */
+    }
+
+    .header-content {
+        flex-direction: column; /* Coloca logo em cima e menu embaixo */
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 1.3rem; /* Diminui um pouco o logo */
+        margin-bottom: 5px;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap; /* Tenta manter na mesma linha */
+        gap: 15px; /* Espaço entre os itens */
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    nav a {
+        font-size: 0.75rem; /* Texto do menu menor */
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+    /* Ajuste especial para o botão 'Parceria' no menu mobile */
+    .btn-contact {
+        padding: 4px 10px;
+        font-size: 0.75rem;
+    }
+
+    /* 2. Melhoria no Banner (Capa) */
+    .hero-banner {
+        /* Adiciona espaço no topo para o conteúdo não ficar atrás do header */
+        padding-top: 120px; 
+    }
+
+    .hero-content-overlay {
+        width: 90%; /* Deixa uma margem nas laterais */
+        top: 50%; /* Centraliza */
+        transform: translate(-50%, -40%); /* Sobe um pouquinho o texto */
+    }
+
+    .hero-content-overlay h1 {
+        font-size: 1.8rem; /* Título menor para não gritar */
+        line-height: 1.2;
+        margin-bottom: 10px;
+        text-shadow: 0px 2px 10px rgba(0,0,0,0.8); /* Sombra para leitura */
+    }
+
+    .hero-content-overlay p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+        text-shadow: 0px 2px 5px rgba(0,0,0,0.8);
+    }
+
+    /* Botão Amarelo mais elegante */
+    .btn-primary {
+        width: 100%; /* Ocupa a largura disponível */
+        max-width: 280px; /* Mas trava em 280px para não ficar gigante */
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        display: block;
+        margin: 0 auto; /* Centraliza o botão */
+        box-shadow: 0px 4px 15px rgba(212, 175, 55, 0.3); /* Brilho dourado suave */
+    }
+}
+
+/* --- Sobre --- */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: -10px 10px 0px var(--primary-color);
+}
+
+.about-text h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    color: var(--text-gray);
+}
+
+/* --- Conquistas --- */
+.section-dark {
+    background-color: #0a0a0a;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.card i {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.gold { color: #FFD700; }
+.silver { color: #C0C0C0; }
+.bronze { color: #CD7F32; }
+
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-family: var(--font-heading);
+}
+
+.card p {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+/* --- Estilos da Nova Seção de Conquistas --- */
+
+.titles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cria colunas responsivas */
+    gap: 30px;
+    align-items: start; /* Alinha tudo ao topo */
+}
+
+.titles-column {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+.titles-column:hover {
+    transform: translateY(-5px);
+}
+
+/* Bordas coloridas para identificar as medalhas */
+.gold-border { border-top: 4px solid #FFD700; }
+.silver-border { border-top: 4px solid #C0C0C0; }
+.bronze-border { border-top: 4px solid #CD7F32; }
+
+.column-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
+}
+
+.column-header h3 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.titles-list {
+    list-style: none;
+    padding: 0;
+}
+
+.titles-list li {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #ccc;
+    padding-left: 15px;
+    position: relative;
+    border-left: 2px solid #333; /* Linha guia discreta */
+    line-height: 1.4;
+}
+
+/* Destaque para os títulos mais importantes (Highlight) */
+.titles-list li.highlight {
+    color: #fff;
+    font-weight: 700;
+    border-left: 3px solid var(--primary-color); /* Linha dourada na esquerda */
+    background: linear-gradient(90deg, rgba(212, 175, 55, 0.1), transparent); /* Fundo suave */
+    padding: 5px 5px 5px 15px; /* Ajuste de padding */
+    border-radius: 0 4px 4px 0;
+}
+
+/* Cores dos ícones */
+.gold { color: #FFD700; }
+.silver { color: #C0C0C0; }
+.bronze { color: #CD7F32; }
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .titles-grid {
+        grid-template-columns: 1fr; /* Vira uma coluna só no celular */
+    }
+    
+    .titles-list li {
+        font-size: 0.9rem;
+    }
+}
+
+/* --- Mídia / Stats --- */
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    text-align: center;
+    background: linear-gradient(145deg, #1e1e1e, #252525);
+    padding: 40px;
+    border-radius: 15px;
+    min-width: 200px;
+    box-shadow: 5px 5px 15px #0a0a0a, -5px -5px 15px #262626;
+}
+
+.stat-box i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.stat-box .number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 900;
+    font-family: var(--font-heading);
+}
+
+.stat-box .label {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    color: var(--text-gray);
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 80px 0 40px;
+    background-color: #000;
+    border-top: 1px solid #333;
+}
+
+footer h2 {
+    font-family: var(--font-heading);
+    margin-bottom: 20px;
+}
+
+footer p {
+    margin-bottom: 30px;
+    color: var(--text-gray);
+}
+
+.social-links {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+.copyright {
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        margin-top: 20px;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-container {
+        gap: 20px;
+    }
+}
+
+.percent-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    font-size: 2.5rem;
+    font-weight: 900;
+    font-family: var(--font-heading);
+}
+
+.percent-wrapper .number {
+    font-size: inherit; /* Herda o tamanho */
+}
+
+.percent-wrapper span {
+    font-size: 1.5rem; /* O símbolo de % fica um pouco menor */
+    margin-left: 2px;
+}
+
+/* --- Estilos para Estatísticas em Imagem --- */
+
+.stats-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Permite quebrar linha no celular */
+}
+
+.stat-img-box {
+    flex: 1; /* Tenta ocupar espaço igual */
+    min-width: 280px; /* Largura mínima para não ficar muito pequeno */
+    max-width: 350px; /* Largura máxima */
+    border-radius: 15px;
+    overflow: hidden; /* Garante que a imagem não saia da borda redonda */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5); /* Sombra para dar destaque */
+    border: 1px solid #333; /* Borda sutil */
+    transition: transform 0.3s ease;
+}
+
+.stat-img-box:hover {
+    transform: translateY(-5px); /* Efeito de subir ao passar o mouse */
+    border-color: var(--primary-color); /* Borda fica dourada */
+}
+
+.stat-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cobre todo o espaço sem deformar */
+    display: block; /* Remove espaços brancos extras */
+}
+
+/* Ajuste Mobile */
+@media (max-width: 768px) {
+    .stats-gallery {
+        flex-direction: column; /* Um embaixo do outro no celular */
+        align-items: center;
+    }
+    
+    .stat-img-box {
+        width: 100%;
+        max-width: 100%; /* Aproveita a largura total do celular */
+    }
+}
