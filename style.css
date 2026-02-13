@@ -571,7 +571,7 @@ footer p {
 .sponsor-item img {
     max-width: 100%;
     max-height: 100px; /* Altura máxima para todos ficarem iguais */
-    filter: grayscale(100%) brightness(0.8); /* Deixa preto e branco */
+    /*filter: grayscale(100%) brightness(0.8); /* Deixa preto e branco */
     transition: all 0.3s ease;
     opacity: 0.7;
 }
