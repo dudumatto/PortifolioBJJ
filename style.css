@@ -554,3 +554,112 @@ footer p {
         max-width: 100%; /* Aproveita a largura total do celular */
     }
 }
+
+/* --- Seção de Patrocinadores --- */
+
+/* Grid dos Logos */
+.sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 40px;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 80px;
+    opacity: 0.8;
+}
+
+.sponsor-item img {
+    max-width: 100%;
+    max-height: 100px; /* Altura máxima para todos ficarem iguais */
+    filter: grayscale(100%) brightness(0.8); /* Deixa preto e branco */
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.sponsor-item img:hover {
+    filter: grayscale(0%) brightness(1); /* Volta a cor original no mouse */
+    opacity: 1;
+    transform: scale(1.1); /* Aumenta levemente */
+}
+
+/* Box de Chamada (CTA) */
+.sponsor-cta-box {
+    background: linear-gradient(145deg, #1a1a1a, #222);
+    border: 1px solid #333;
+    border-left: 5px solid var(--primary-color); /* Detalhe dourado na lateral */
+    padding: 50px;
+    border-radius: 10px;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efeito de brilho no fundo */
+.sponsor-cta-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    background: linear-gradient(to left, rgba(212, 175, 55, 0.05), transparent);
+    pointer-events: none;
+}
+
+.cta-content h3 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.cta-content p {
+    color: #ccc;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.benefits-list {
+    list-style: none;
+    margin-bottom: 30px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.benefits-list li {
+    font-size: 0.9rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.benefits-list i {
+    color: var(--primary-color);
+}
+
+/* Responsividade Mobile */
+@media (max-width: 768px) {
+    .sponsors-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 logos por linha no celular */
+        gap: 20px;
+    }
+
+    .sponsor-cta-box {
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .benefits-list {
+        flex-direction: column;
+        align-items: center; /* Centraliza a lista */
+        gap: 10px;
+    }
+    
+    .sponsor-cta-box::before {
+        display: none;
+    }
+}
+
