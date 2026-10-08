@@ -23,7 +23,7 @@
                 <ul>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#conquistas">Títulos</a></li>
-                    <li><a href="#video">Midia</a></li>
+                    <li><a href="#video">Mídia</a></li>
                     <li><a href="#parceiros">Parceiros</a></li>
                     <li><a href="#contato" class="btn-contact">Parceria</a></li>
                 </ul>
@@ -31,22 +31,19 @@
         </div>
     </header>
 
-    <section class="hero-banner">
-        <div class="banner-container">
-            <img src="Landing3.png" alt="Banner Eduardo" class="img-responsive">
-
-            <div class="hero-content-overlay">
-                <h1>ATLETA DE ALTA PERFORMANCE</h1>
-                <p>Jiu-Jitsu Brasileiro</p>
-                <a href="#contato" class="btn-primary">Seja um Patrocinador</a>
-            </div>
+    <section class="hero">
+        <div class="container hero-text">
+            <span class="hero-tag">Jiu-Jitsu Brasileiro</span>
+            <h1>ATLETA DE<br><span>ALTA PERFORMANCE</span></h1>
+            <p>Disciplina, técnica e resultados no pódio nacional e internacional.</p>
+            <a href="#contato" class="btn-primary">Seja um Patrocinador</a>
         </div>
     </section>
 
     <section id="sobre" class="section-padding">
         <div class="container about-grid">
             <div class="about-img">
-                <img src="Brasileiro.jpg" alt="Eduardo Mattos">
+                <img src="images/eduardo/novas/brJoao1.jpg" alt="Eduardo Mattos" loading="lazy">
             </div>
             <div class="about-text">
                 <h2>QUEM É EDUARDO?</h2>
@@ -60,78 +57,141 @@
     </section>
 
     <section id="video" class="section-dark section-padding">
-    <div class="container">
-        <h2 class="section-title">EDUARDO EM AÇÃO</h2>
-        <p class="section-subtitle">Técnica, força e explosão nos tatames.</p>
+        <div class="container">
+            <h2 class="section-title">EDUARDO EM AÇÃO</h2>
+            <p class="section-subtitle">Técnica, força e explosão nos tatames.</p>
 
-        <div class="local-video-container">
-            <video autoplay muted loop playsinline controls class="video-player" poster="capa-do-video.jpg">
-                <source src="VideoLutaMov.mov" type="video/mp4">
-                Seu navegador não suporta a tag de vídeo.
-            </video>
+            <div class="carousel" id="videoCarousel">
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <video muted loop playsinline controls class="video-player">
+                            <source src="video/BR.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="carousel-slide">
+                        <video muted loop playsinline controls class="video-player">
+                            <source src="video/VIdeoLuta.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="carousel-slide">
+                        <video muted loop playsinline controls class="video-player">
+                            <source src="video/VideoSul.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="carousel-slide">
+                        <video muted loop playsinline controls class="video-player">
+                            <source src="video/bjjStars.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="carousel-slide">
+                        <video muted loop playsinline controls class="video-player">
+                            <source src="video/VideoLutaMov.mov" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <button class="carousel-btn prev" aria-label="Vídeo anterior"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-btn next" aria-label="Próximo vídeo"><i class="fas fa-chevron-right"></i></button>
+                <div class="carousel-dots"></div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-    <section id="conquistas" class="section-dark section-padding">
+    <section id="conquistas" class="section-padding">
         <div class="container">
             <h2 class="section-title">Histórico de Conquistas</h2>
-            <p class="section-subtitle">Uma trajetória marcada pela constância no pódio.</p>
+            <p class="section-subtitle">Trajetória por federação, com os títulos de ouro em destaque.</p>
 
-            <div class="titles-grid">
+            <div class="legend">
+                <span><i class="fas fa-medal gold"></i> Ouro</span>
+                <span><i class="fas fa-medal silver"></i> Prata</span>
+                <span><i class="fas fa-medal bronze"></i> Bronze</span>
+            </div>
 
-                <div class="titles-column gold-border">
-                    <div class="column-header">
-                        <i class="fas fa-medal gold"></i>
-                        <h3>CAMPEÃO (Ouro)</h3>
+            <div class="fed-grid">
+
+                <div class="fed-card">
+                    <div class="fed-header">
+                        <h3>CBJJ / IBJJF</h3>
+                        <span class="fed-sub">Confederação / Federação Internacional</span>
                     </div>
                     <ul class="titles-list">
-                        <li class="highlight">Campeã BRASILEIRO CBJJ/IBJJF</li>
-                        <li class="highlight">Campeã Grand Slam UAEJJ (Rio de Janeiro)</li>
-                        <li>2x Campeã International Kids IBJJF (Curitiba/SP)</li>
-                        <li>Campeã São Paulo Open IBJJF</li>
-                        <li>2x Campeã Paulista FPJJ</li>
-                        <li>2x Campeã de Etapas do Circuito Paulista (2ª e 3ª) FPJJ</li>
-                        <li>Campeã Mundial CBJJE</li>
-                        <li>Campeã Mundial No-Gi CBJJE</li>
-                        <li>Campeã Brasileiro No-Gi CBJJE</li>
-                        <li>Campeã Panamericano CBJJE</li>
-                        <li>Campeã Panamericano No-Gi CBJJE</li>
-                        <li class="highlight">Campeã ADCC SP</li>
-                        <li>Primeiro lugar BJJ Talents</li>
+                        <li class="gold-item highlight"><i class="fas fa-medal gold"></i> 2x Campeão Brasileiro CBJJ</li>
+                        <li class="gold-item"><i class="fas fa-medal gold"></i> 2x Campeão International Kids IBJJF (Curitiba/SP)</li>
+                        <li class="gold-item"><i class="fas fa-medal gold"></i> Campeão São Paulo Open IBJJF</li>
+                        <li><i class="fas fa-medal silver"></i> Vice-Campeão International Kids IBJJF (Floripa)</li>
+                        <li><i class="fas fa-medal bronze"></i> 2x 3º lugar Sul-Americano CBJJ</li>
+                        <li><i class="fas fa-medal bronze"></i> 3º lugar Brasileiro sem kimono CBJJ</li>
+                        <li><i class="fas fa-medal bronze"></i> 2x 3º lugar Rio Summer CBJJ</li>
                     </ul>
                 </div>
 
-                <div class="titles-column silver-border">
-                    <div class="column-header">
-                        <i class="fas fa-medal silver"></i>
-                        <h3>VICE-CAMPEÃO (Prata)</h3>
+                <div class="fed-card">
+                    <div class="fed-header">
+                        <h3>UAEJJF</h3>
+                        <span class="fed-sub">Abu Dhabi Jiu-Jitsu</span>
                     </div>
                     <ul class="titles-list">
-                        <li>Vice-Campeã Internacional Kids IBJJF (Floripa)</li>
-                        <li>Vice-Campeã Brasileiro CBJJE</li>
-                        <li>Vice-Campeã Mundial No-Gi CBJJE</li>
-                        <li class="highlight">Vice-Campeã ADCC SP</li>
-                        <li>3x Vice-Campeã da 1ª Etapa do Circuito Paulista FPJJ</li>
-                        <li>2x Segundo lugar ADD Latin-America</li>
+                        <li class="gold-item highlight"><i class="fas fa-medal gold"></i> Campeão Grand Slam UAEJJF (Rio de Janeiro)</li>
                     </ul>
                 </div>
 
-                <div class="titles-column bronze-border">
-                    <div class="column-header">
-                        <i class="fas fa-medal bronze"></i>
-                        <h3>TERCEIRO LUGAR (Bronze)</h3>
+                <div class="fed-card">
+                    <div class="fed-header">
+                        <h3>ADCC</h3>
+                        <span class="fed-sub">Submission Fighting</span>
                     </div>
                     <ul class="titles-list">
-                        <li>Terceiro lugar Rio Summer IBJJF (Gi e No-Gi)</li>
-                        <li>2x Terceiro Lugar na 2ª Etapa do Circuito Paulista FPJJ</li>
-                        <li>2x Terceiro lugar Mundial No-Gi CBJJE</li>
+                        <li class="gold-item highlight"><i class="fas fa-medal gold"></i> Campeão ADCC SP</li>
+                        <li class="highlight"><i class="fas fa-medal silver"></i> Vice-Campeão ADCC SP</li>
+                        <li><i class="fas fa-medal silver"></i> 2x 2º lugar ADD Latin-America</li>
+                    </ul>
+                </div>
+
+                <div class="fed-card">
+                    <div class="fed-header">
+                        <h3>FPJJ</h3>
+                        <span class="fed-sub">Federação Paulista</span>
+                    </div>
+                    <ul class="titles-list">
+                        <li class="gold-item"><i class="fas fa-medal gold"></i> 2x Campeão Paulista FPJJ</li>
+                        <li class="gold-item"><i class="fas fa-medal gold"></i> 2x Campeão de Etapas do Circuito Paulista (2ª e 3ª) FPJJ</li>
+                        <li><i class="fas fa-medal silver"></i> 3x Vice-Campeão da 1ª Etapa do Circuito Paulista FPJJ</li>
+                        <li><i class="fas fa-medal bronze"></i> 2x 3º lugar na 2ª Etapa do Circuito Paulista FPJJ</li>
+                    </ul>
+                </div>
+
+                <div class="fed-card">
+                    <div class="fed-header">
+                        <h3>CBJJE</h3>
+                        <span class="fed-sub">Confederação Brasileira de JJ Esportivo</span>
+                    </div>
+                    <ul class="titles-list">
+                        <li class="gold-item"><i class="fas fa-medal gold"></i> Campeão Mundial CBJJE</li>
+                        <li class="gold-item"><i class="fas fa-medal gold"></i> Campeão Mundial No-Gi CBJJE</li>
+                        <li class="gold-item"><i class="fas fa-medal gold"></i> Campeão Brasileiro No-Gi CBJJE</li>
+                        <li class="gold-item"><i class="fas fa-medal gold"></i> Campeão Panamericano CBJJE</li>
+                        <li class="gold-item"><i class="fas fa-medal gold"></i> Campeão Panamericano No-Gi CBJJE</li>
+                        <li><i class="fas fa-medal silver"></i> Vice-Campeão Brasileiro CBJJE</li>
+                        <li><i class="fas fa-medal silver"></i> Vice-Campeão Mundial No-Gi CBJJE</li>
+                        <li><i class="fas fa-medal bronze"></i> 2x 3º lugar Mundial No-Gi CBJJE</li>
+                    </ul>
+                </div>
+
+                <div class="fed-card">
+                    <div class="fed-header">
+                        <h3>Outros</h3>
+                        <span class="fed-sub">Eventos e circuitos</span>
+                    </div>
+                    <ul class="titles-list">
+                        <li class="gold-item highlight"><i class="fas fa-medal gold"></i> 1º lugar BJJ Talents</li>
                     </ul>
                 </div>
 
             </div>
         </div>
     </section>
+
     <section id="parceiros" class="section-dark section-padding">
         <div class="container">
             <h2 class="section-title">Time de Campeões</h2>
@@ -139,16 +199,16 @@
 
             <div class="sponsors-grid">
                 <div class="sponsor-item">
-                    <img src="nutri.png" alt="Logo Academia">
+                    <img src="images/patrocinios/nutri.png" alt="Patrocinador Nutri" loading="lazy">
                 </div>
                 <div class="sponsor-item">
-                    <img src="Logo Medal.png" alt="Logo Fisioterapia">
+                    <img src="images/patrocinios/Logo Medal.png" alt="Patrocinador Medal" loading="lazy">
                 </div>
                 <div class="sponsor-item">
-                    <img src="LogoPanobianco.png" alt="Logo Kimonos">
+                    <img src="images/patrocinios/LogoPanobianco.png" alt="Patrocinador Panobianco" loading="lazy">
                 </div>
                 <div class="sponsor-item">
-                    <img src="trier.png" alt="Logo Nutricionista">
+                    <img src="images/patrocinios/trier.png" alt="Patrocinador Trier" loading="lazy">
                 </div>
             </div>
 
@@ -175,12 +235,41 @@
             <h2>VAMOS TRABALHAR JUNTOS?</h2>
             <p>Entre em contato para solicitar o Mídia Kit completo e propostas de patrocínio.</p>
             <a href="mailto:mattosdudu2009@gmail.com" class="btn-primary">Enviar E-mail</a>
-
-            <div class="social-links">
-            </div>
             <p class="copyright">© 2026 Eduardo Mattos BJJ. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <script>
+        (function () {
+            const c = document.getElementById('videoCarousel');
+            const track = c.querySelector('.carousel-track');
+            const slides = [...c.querySelectorAll('.carousel-slide')];
+            const videos = [...c.querySelectorAll('video')];
+            const dotsWrap = c.querySelector('.carousel-dots');
+            let i = 0;
+
+            slides.forEach((_, n) => {
+                const d = document.createElement('button');
+                d.className = 'dot';
+                d.setAttribute('aria-label', 'Ir ao vídeo ' + (n + 1));
+                d.addEventListener('click', () => go(n));
+                dotsWrap.appendChild(d);
+            });
+            const dots = [...dotsWrap.children];
+
+            function go(n) {
+                i = (n + slides.length) % slides.length;
+                track.style.transform = `translateX(-${i * 100}%)`;
+                dots.forEach((d, k) => d.classList.toggle('active', k === i));
+                videos.forEach((v, k) => { if (k !== i) v.pause(); });
+                videos[i].play().catch(() => {});
+            }
+
+            c.querySelector('.prev').addEventListener('click', () => go(i - 1));
+            c.querySelector('.next').addEventListener('click', () => go(i + 1));
+            go(0);
+        })();
+    </script>
 
 </body>
 
